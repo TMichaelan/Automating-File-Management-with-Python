@@ -3,7 +3,6 @@ import os, shutil, time
 PROCESS_PATH = 'C:\\Users\\bigap\\Desktop\\Print Postage'
 folder_list = ["2.5cm", "3.5cm", "4.5cm", "6.5cm", "9.5cm"]
 
-# Separate the PDFs from PSDs
 def execution():
     # Remove the MAC folder
     try:
