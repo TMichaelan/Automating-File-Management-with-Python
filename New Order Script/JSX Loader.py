@@ -29,14 +29,22 @@ def execution():
                         file_list = os.listdir(path)
 
                         for file_name in file_list:
-                            os.system("cd {path_to_illustrator}".format(path_to_illustrator = path_to_illustrator))
-                            os.system(r"start Illustrator.exe {path}\{file_name}".format(path=path,file_name = file_name))
-                            time.sleep(10)
-                            if list_element in folder_list:
-                                jsx_script = "Batch Print {folder}.jsx".format(folder=list_element)
-                                os.system("\"{path_to_scripts}\{jsx_script}\"".format(path_to_scripts=path_to_scripts,jsx_script=jsx_script))
-                                time.sleep(5)
-                                os.system("taskkill /IM Illustrator.exe /F")
+
+                            # print(r"start Illustrator.exe {path}\{file_name}".format(path=path, file_name=file_name))
+                            #OLD os.system("cd {path_to_illustrator}".format(path_to_illustrator=path_to_illustrator) + " && Illustrator.exe {path}\{file_name}".format(path=path, file_name=file_name))
+                            os.system("cd {path_to_illustrator}".format(path_to_illustrator=path_to_illustrator))
+                            os.system(r"start Illustrator.exe {path}\{file_name}".format(path=path, file_name=file_name))
+
+                            # os.system("cd {path_to_illustrator}".format(path_to_illustrator=path_to_illustrator) + " && " + r"start Illustrator.exe {path}\{file_name}".format(path=path, file_name=file_name))
+                            # print("cd {path_to_illustrator}".format(path_to_illustrator=path_to_illustrator) + " && " + r"start Illustrator.exe {path}\{file_name}".format(path=path, file_name=file_name))
+                            # time.sleep(5)
+
+                            # if list_element in folder_list:
+                            #     jsx_script = "Batch Print {folder}.jsx".format(folder=list_element)
+                            #     os.system("\"{path_to_scripts}\{jsx_script}\"".format(path_to_scripts=path_to_scripts,jsx_script=jsx_script))
+                            #     time.sleep(5)
+                                # CLOSE Illustrator
+                                # os.system("taskkill /IM Illustrator.exe /F")
 
 
 start_time = time.time()
