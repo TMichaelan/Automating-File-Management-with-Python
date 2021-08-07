@@ -1,3 +1,0 @@
-watchdog
-beautifulsoup4
-selenium
